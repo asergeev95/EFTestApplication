@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Core;
 using Microsoft.EntityFrameworkCore;
 
 namespace EFTestApplication.Infrastructure.EntityFramework
@@ -14,6 +17,16 @@ namespace EFTestApplication.Infrastructure.EntityFramework
         {
             modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
             modelBuilder.HasDefaultSchema(DefaultSchemaName);
+        }
+
+        public async Task<List<Person>> GetPersons()
+        {
+            return await Set<Person>().ToListAsync();
+        }
+
+        public void AddPerson(Person person)
+        {
+            Set<Person>().Add(person);
         }
     }
 }
