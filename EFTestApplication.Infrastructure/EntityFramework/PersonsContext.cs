@@ -21,7 +21,9 @@ namespace EFTestApplication.Infrastructure.EntityFramework
 
         public async Task<List<Person>> GetPersons()
         {
-            return await Set<Person>().ToListAsync();
+            return await Set<Person>()
+                .Include(p => p.Relatives)
+                .ToListAsync();
         }
 
         public void AddPerson(Person person)

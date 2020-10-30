@@ -23,7 +23,6 @@ namespace EFTestApplication.Infrastructure.EntityFramework.Configurations
                 .WithOne(r => r.Person)
                 .HasForeignKey(t => t.PersonId)
                 .OnDelete(DeleteBehavior.Cascade);
-
         }
     }
 }
