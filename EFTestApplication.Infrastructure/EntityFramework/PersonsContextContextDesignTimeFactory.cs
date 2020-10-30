@@ -8,7 +8,7 @@ namespace EFTestApplication.Infrastructure.EntityFramework
     public sealed class AccountRegistrationContextDesignTimeFactory : IDesignTimeDbContextFactory<PersonsContext>
     {
         private const string DefaultConnectionString =
-            "Data Source=127.0.0.1;Initial Catalog=EFTestApplication";
+            "Data Source=127.0.0.1;Initial Catalog=EFTestApplication;User Id=sa; Password=2wsx2WSX;";
         public static DbContextOptions<PersonsContext> GetSqlServerOptions([CanBeNull]string connectionString)
         {
             return new DbContextOptionsBuilder<PersonsContext>()
