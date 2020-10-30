@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Core
 {
@@ -9,5 +10,6 @@ namespace Core
         public int Age { get; set; }
         public string Address { get; set; }
         public DateTime Birthday { get; set; }
+        public List<Relative> Relatives { get; set; }
     }
 }

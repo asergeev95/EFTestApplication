@@ -19,6 +19,11 @@ namespace EFTestApplication.Infrastructure.EntityFramework.Configurations
             builder.Property(x => x.Age).IsRequired();
             builder.Property(x => x.Birthday).IsRequired();
 
+            builder.HasMany(x => x.Relatives)
+                .WithOne(r => r.Person)
+                .HasForeignKey(t => t.PersonId)
+                .OnDelete(DeleteBehavior.Cascade);
+
         }
     }
 }
