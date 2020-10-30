@@ -5,7 +5,12 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="JetBrains.Annotations" Version="2020.1.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EFTestApplication.Core\EFTestApplication.Core.csproj" />
     </ItemGroup>
 
 </Project>
