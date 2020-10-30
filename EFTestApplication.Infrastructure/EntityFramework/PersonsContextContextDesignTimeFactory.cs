@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Design;
 namespace EFTestApplication.Infrastructure.EntityFramework
 {
     [UsedImplicitly]
-    public sealed class AccountRegistrationContextDesignTimeFactory : IDesignTimeDbContextFactory<PersonsContext>
+    public sealed class PersonsContextContextDesignTimeFactory : IDesignTimeDbContextFactory<PersonsContext>
     {
         private const string DefaultConnectionString =
             "Data Source=127.0.0.1;Initial Catalog=EFTestApplication;User Id=sa; Password=2wsx2WSX;";
