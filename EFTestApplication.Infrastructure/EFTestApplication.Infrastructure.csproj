@@ -5,6 +5,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="Migrations\20201030091014_Birthday.cs" />
+      <Compile Remove="Migrations\20201030091014_Birthday.Designer.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
       <PackageReference Include="JetBrains.Annotations" Version="2020.1.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
     </ItemGroup>

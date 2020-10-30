@@ -17,6 +17,7 @@ namespace EFTestApplication.Infrastructure.EntityFramework.Configurations
             builder.Property(x => x.Address).HasMaxLength(4000);
             builder.Property(x => x.Name).HasMaxLength(30).IsRequired();
             builder.Property(x => x.Age).IsRequired();
+            builder.Property(x => x.Birthday).IsRequired();
 
         }
     }
